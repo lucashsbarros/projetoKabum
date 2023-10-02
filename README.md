@@ -56,7 +56,8 @@ Nesse repositório consta os seguintes cenários de testes:
  - **Caso de Teste 01** - Validar um usuário inválido senha ou e-mail incorretos
  - **Caso de Teste 02** - Fazer a busca de produto
  - **Caso de Teste 03** - Adicionar um produto de categoria ao carrinho atalho "Carrinho"
- - **Caso de Teste 04** - Adicionar um produto de categoria ao carrinho botão "Comprar" 
+ - **Caso de Teste 04** - Adicionar um produto de categoria ao carrinho botão "Comprar"
+ - **Caso de Teste 05** -  (Extra) - Adicionar um produto de categoria ao carrinho clicando no produto
  
  # Notas Gerais
  Referente ao **Caso de Teste 01**, existe outras formas de fazer uma validação de um usuário inválido, sendo elas: 
