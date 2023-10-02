@@ -11,6 +11,7 @@ Esse repositório contém testes automatizados através da ferramenta Robot Fram
 
     b) RequestLibrary *(versão 1.0a4)*
 4. Instalando editor de Código
+
 	a) DRACULA OFFICIAL (opcional)
 Pesquisar na parte de Plugins da sua IDE (no nosso caso foi o IntelliJ) 
 	
