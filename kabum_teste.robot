@@ -39,18 +39,18 @@ Caso de Teste 04 - Adicionar um produto de categoria ao carrinho botão "Comprar
     Acessar a home page do site Kabum.com.br
     Entrar no menu Departamentos > Hardware > Coolers > Acessórios para Cooler
     Adicionar produto no carrinho usando botao "Comprar"
-    Validar se o produto está no carrinho usando botao "Comprar"
+   Validar se o produto está no carrinho usando botao "Comprar"
 
-#Caso de Teste 05 (Extra) - Adicionar um produto de categoria ao carrinho clicando no produto
-#    [Documentation]     Esse teste navega até a subcategoria Acessórios para Cooler
-#        ...             e adiciona um produto no carrinho através do botão Comprar
-#    [Tags]              adiciona_produto
-#    Acessar a home page do site Kabum.com.br
-#    Entrar no menu Departamentos > Haqrdware > Coolers > Acessórios para Cooler
-#    Clicar no produto
-#    Validar página do produto
-#    Clicar no botão comprar
-#    Validar produto no carrinho
+Caso de Teste 05 (Extra) - Adicionar um produto de categoria ao carrinho clicando no produto
+    [Documentation]     Esse teste navega até a subcategoria Acessórios para Cooler
+        ...             e adiciona um produto no carrinho através do botão Comprar
+    [Tags]              adiciona_produto
+    Acessar a home page do site Kabum.com.br
+    Entrar no menu Departamentos > Hardware > Coolers > Acessórios para Cooler
+    Clicar no produto
+    Validar página do produto
+    Clicar no botão comprar
+    Validar produto no carrinho
 
 
 

@@ -5,16 +5,16 @@ Library     SeleniumLibrary
 ${URL}                              https://kabum.com.br
 ${ELEMENTO_LOGIN}                   //a[contains(.,'LOGIN')]
 ${BOTAO_ENTRAR}                     //button[@type='submit'][contains(.,'ENTRAR')]
-${BOTAO_PESQUISA}                   //button[contains(@class,'sc-eCstlR sc-fodVek eIibBL gigTEi')]
-${RESULTADO_PESQUISA}               //div[@class='sc-iGculD lexxIg'][contains(.,'Você está em: Celular & Smartphone > Smartphones > IPhone')]
+${BOTAO_PESQUISA}                   //button[contains(@aria-label,'Buscar')]
+${RESULTADO_PESQUISA}               //a[@href='https://www.kabum.com.br/celular-smartphone/smartphones/iphone'][contains(.,'IPhone')]
 ${MENU_DEPARTAMENTOS}               //span[contains(.,'DEPARTAMENTOS')]
 ${SUBCATEGORIA_HARDWARE}            //a[@href='https://www.kabum.com.br/hardware']
 ${SUBCATEGORIA_COOLERS}             //a[@href='https://www.kabum.com.br/hardware/coolers']
 ${SUBCATEGORIA_ACESSO_COOLERS}      //a[@href='https://www.kabum.com.br/hardware/coolers/acessorios-para-cooler']
 ${MOUSE}                            //img[contains(@title,'Controlador De Fan Bcf-03 Bluecase - Box Com Controle Remoto')]
-${BOTAO_CARRINHO}                   (//button[@class='sc-5b1e63c8-0 iRosYJ'])[1]
+${BOTAO_CARRINHO}                   //a[@data-smarthintproductid="183963"]//..//div//button[@class="sc-5b1e63c8-0 hneVTx"]
 ${TEXTO_CARRINHO}                   Produto adicionado com sucesso no carrinho
-${BOTAO_COMPRAR}                    (//button[@class='sc-534df227-0 csoHAH'][contains(.,'COMPRAR')])[2]
+${BOTAO_COMPRAR}                    //a[@data-smarthintproductid="183963"]//..//div[@class="sc-6061e719-4 sc-6061e719-6 cvhwQf icTcdT availableFooterCard"]//button
 ${TEXTO_CARRINHO2}                  PRODUTO ADICIONADO NO CARRINHO
 ${TITULO}                           KaBuM! | Maior E-commerce de Tecnologia e Games da América Latina
 ${PRODUTO}                          //img[contains(@title,'Controlador De Fan Bcf-03 Bluecase - Box Com Controle Remoto')]
@@ -67,16 +67,20 @@ Entrar no menu Departamentos > Hardware > Coolers > Acessórios para Cooler
 
 Adicionar produto no carrinho usando botao atalho "Carrinho"
     Execute Javascript  window.scroll(0,700)
-    Mouse Over       locator=${MOUSE}
-    Click Button    locator=${BOTAO_CARRINHO}
+    Mouse Over                          locator=${MOUSE}
+    Sleep    1s
+    Wait Until Element Is Visible       locator=${BOTAO_CARRINHO}
+    Click Button                        locator=${BOTAO_CARRINHO}
 
 Validar se o produto está no carrinho usando botao atalho "Carrinho"
     Wait Until Page Contains    text=${TEXTO_CARRINHO}
 
 Adicionar produto no carrinho usando botao "Comprar"
     Execute Javascript  window.scroll(0,700)
+    Sleep    1s
     Wait Until Element Is Visible       locator=${BOTAO_COMPRAR}
-    Click Button    locator=${BOTAO_COMPRAR}
+    Click Element    locator=${BOTAO_COMPRAR}
+
 
 Validar se o produto está no carrinho usando botao "Comprar"
     Wait Until Page Contains    text=${TEXTO_CARRINHO2}
