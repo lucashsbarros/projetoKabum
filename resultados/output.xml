@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20230930 15:56:46.744" rpa="false" schemaversion="4">
+<suite id="s1" name="Kabum Teste" source="E:\BACKUPLUCAS\ProjetosLucas\Kabum\kabum_teste.robot">
+<test id="s1-t1" name="Caso de Teste 01 - Validar um usuário inválido senha ou e-mail incorretos" line="9">
+<kw name="Abrir o navegador" library="kabum_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230930 15:56:46.913" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230930 15:56:46.913" endtime="20230930 15:56:48.030"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230930 15:56:48.031" endtime="20230930 15:56:48.152"/>
+</kw>
+<status status="PASS" starttime="20230930 15:56:46.912" endtime="20230930 15:56:48.152"/>
+</kw>
+<kw name="Acessar a home page do site Kabum.com.br" library="kabum_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230930 15:56:48.153" level="INFO">Opening url 'https://kabum.com.br'</msg>
+<status status="PASS" starttime="20230930 15:56:48.152" endtime="20230930 15:56:51.551"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=logoKabum</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 15:56:51.551" endtime="20230930 15:56:51.607"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>title=${TITULO}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230930 15:56:51.621" level="INFO">Page title is 'KaBuM! | Maior E-commerce de Tecnologia e Games da América Latina'.</msg>
+<status status="PASS" starttime="20230930 15:56:51.607" endtime="20230930 15:56:51.621"/>
+</kw>
+<status status="PASS" starttime="20230930 15:56:48.152" endtime="20230930 15:56:51.621"/>
+</kw>
+<kw name="Clicar no botão &quot;Login&quot;" library="kabum_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${ELEMENTO_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230930 15:56:51.622" level="INFO">Clicking element '//a[contains(.,'LOGIN')]'.</msg>
+<status status="PASS" starttime="20230930 15:56:51.622" endtime="20230930 15:56:55.404"/>
+</kw>
+<status status="PASS" starttime="20230930 15:56:51.622" endtime="20230930 15:56:55.404"/>
+</kw>
+<kw name="Preencher dados" library="kabum_resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=login</arg>
+<arg>text=lucas@hotmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230930 15:56:55.406" level="INFO">Typing text 'lucas@hotmail.com' into text field 'login'.</msg>
+<status status="PASS" starttime="20230930 15:56:55.406" endtime="20230930 15:56:55.708"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=password</arg>
+<arg>text=123456</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230930 15:56:55.709" level="INFO">Typing text '123456' into text field 'password'.</msg>
+<status status="PASS" starttime="20230930 15:56:55.708" endtime="20230930 15:56:55.833"/>
+</kw>
+<status status="PASS" starttime="20230930 15:56:55.405" endtime="20230930 15:56:55.833"/>
+</kw>
+<kw name="Clicar no botão &quot;Entrar&quot;" library="kabum_resources">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>locator=${BOTAO_ENTRAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230930 15:56:55.834" level="INFO">Clicking button '//button[@type='submit'][contains(.,'ENTRAR')]'.</msg>
+<status status="PASS" starttime="20230930 15:56:55.833" endtime="20230930 15:56:55.931"/>
+</kw>
+<status status="PASS" starttime="20230930 15:56:55.833" endtime="20230930 15:56:55.931"/>
+</kw>
+<kw name="O sistema deverá retornar a seguinte mensagem &quot;E-mail, CPF, CNPJ ou senha incorretos&quot;" library="kabum_resources" sourcename="O sistema deverá retornar a seguinte mensagem &quot;${LOGIN_INVALIDO}&quot;">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${LOGIN_INVALIDO}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230930 15:56:55.931" endtime="20230930 15:56:57.234"/>
+</kw>
+<status status="PASS" starttime="20230930 15:56:55.931" endtime="20230930 15:56:57.234"/>
+</kw>
+<doc>Esse teste verifica um usuário inválido no saite da Kabum.com.br</doc>
+<tag>logins</tag>
+<status status="PASS" starttime="20230930 15:56:46.912" endtime="20230930 15:56:57.234"/>
+</test>
+<test id="s1-t2" name="Caso de Teste 02 - Fazer a busca de produto" line="18">
+<kw name="Abrir o navegador" library="kabum_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230930 15:56:57.237" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230930 15:56:57.237" endtime="20230930 15:56:58.406"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230930 15:56:58.406" endtime="20230930 15:56:58.532"/>
+</kw>
+<status status="PASS" starttime="20230930 15:56:57.236" endtime="20230930 15:56:58.532"/>
+</kw>
+<kw name="Acessar a home page do site Kabum.com.br" library="kabum_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230930 15:56:58.532" level="INFO">Opening url 'https://kabum.com.br'</msg>
+<status status="PASS" starttime="20230930 15:56:58.532" endtime="20230930 15:57:02.087"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=logoKabum</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 15:57:02.088" endtime="20230930 15:57:02.154"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>title=${TITULO}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230930 15:57:02.159" level="INFO">Page title is 'KaBuM! | Maior E-commerce de Tecnologia e Games da América Latina'.</msg>
+<status status="PASS" starttime="20230930 15:57:02.154" endtime="20230930 15:57:02.159"/>
+</kw>
+<status status="PASS" starttime="20230930 15:56:58.532" endtime="20230930 15:57:02.159"/>
+</kw>
+<kw name="Digitar o nome &quot;Iphone&quot; no campo de pesquisa" library="kabum_resources" sourcename="Digitar o nome &quot;${PRODUTO_PESQUISADO}&quot; no campo de pesquisa">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=input-busca</arg>
+<arg>text=${PRODUTO_PESQUISADO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230930 15:57:02.162" level="INFO">Typing text 'Iphone' into text field 'input-busca'.</msg>
+<status status="PASS" starttime="20230930 15:57:02.160" endtime="20230930 15:57:02.389"/>
+</kw>
+<status status="PASS" starttime="20230930 15:57:02.160" endtime="20230930 15:57:02.389"/>
+</kw>
+<kw name="Clicar no botão de pesquisa" library="kabum_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${BOTAO_PESQUISA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230930 15:57:02.390" level="INFO">Clicking element '//button[contains(@class,'sc-eCstlR sc-fodVek eIibBL gigTEi')]'.</msg>
+<status status="PASS" starttime="20230930 15:57:02.390" endtime="20230930 15:57:04.906"/>
+</kw>
+<status status="PASS" starttime="20230930 15:57:02.390" endtime="20230930 15:57:04.906"/>
+</kw>
+<kw name="Verificar o resultado da pesquisa, listando o produto pesquisado" library="kabum_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${RESULTADO_PESQUISA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 15:57:04.907" endtime="20230930 15:57:04.941"/>
+</kw>
+<status status="PASS" starttime="20230930 15:57:04.906" endtime="20230930 15:57:04.941"/>
+</kw>
+<doc>Esse teste efetua a busca de um produto e verifica o resultado da busca</doc>
+<tag>busca_produtos categorias</tag>
+<status status="PASS" starttime="20230930 15:56:57.236" endtime="20230930 15:57:04.942"/>
+</test>
+<test id="s1-t3" name="Caso de Teste 03 - Adicionar um produto de categoria ao carrinho atalho &quot;Carrinho&quot;" line="26">
+<kw name="Abrir o navegador" library="kabum_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230930 15:57:04.944" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230930 15:57:04.944" endtime="20230930 15:57:06.090"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230930 15:57:06.090" endtime="20230930 15:57:06.213"/>
+</kw>
+<status status="PASS" starttime="20230930 15:57:04.944" endtime="20230930 15:57:06.214"/>
+</kw>
+<kw name="Acessar a home page do site Kabum.com.br" library="kabum_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230930 15:57:06.214" level="INFO">Opening url 'https://kabum.com.br'</msg>
+<status status="PASS" starttime="20230930 15:57:06.214" endtime="20230930 15:57:09.713"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=logoKabum</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 15:57:09.713" endtime="20230930 15:57:09.760"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>title=${TITULO}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230930 15:57:09.772" level="INFO">Page title is 'KaBuM! | Maior E-commerce de Tecnologia e Games da América Latina'.</msg>
+<status status="PASS" starttime="20230930 15:57:09.760" endtime="20230930 15:57:09.772"/>
+</kw>
+<status status="PASS" starttime="20230930 15:57:06.214" endtime="20230930 15:57:09.772"/>
+</kw>
+<kw name="Entrar no menu &quot;Departamentos&quot; &gt; Hardware &gt; Coolers &gt; Acessórios para Cooler" library="kabum_resources">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>locator=${MENU_DEPARTAMENTOS}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230930 15:57:09.774" level="INFO">Simulating Mouse Over on element '//span[contains(.,'DEPARTAMENTOS')]'.</msg>
+<status status="PASS" starttime="20230930 15:57:09.773" endtime="20230930 15:57:10.103"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${SUBCATEGORIA_HARDWARE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 15:57:10.103" endtime="20230930 15:57:10.135"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>locator=${SUBCATEGORIA_HARDWARE}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230930 15:57:10.135" level="INFO">Simulating Mouse Over on element '//a[@href='https://www.kabum.com.br/hardware']'.</msg>
+<status status="PASS" starttime="20230930 15:57:10.135" endtime="20230930 15:57:10.428"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${SUBCATEGORIA_COOLERS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 15:57:10.428" endtime="20230930 15:57:10.674"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>locator=${SUBCATEGORIA_COOLERS}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230930 15:57:10.675" level="INFO">Simulating Mouse Over on element '//a[@href='https://www.kabum.com.br/hardware/coolers']'.</msg>
+<status status="PASS" starttime="20230930 15:57:10.674" endtime="20230930 15:57:10.970"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${SUBCATEGORIA_ACESSO_COOLERS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 15:57:10.970" endtime="20230930 15:57:11.208"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${SUBCATEGORIA_ACESSO_COOLERS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230930 15:57:11.208" level="INFO">Clicking element '//a[@href='https://www.kabum.com.br/hardware/coolers/acessorios-para-cooler']'.</msg>
+<status status="PASS" starttime="20230930 15:57:11.208" endtime="20230930 15:57:13.310"/>
+</kw>
+<status status="PASS" starttime="20230930 15:57:09.773" endtime="20230930 15:57:13.311"/>
+</kw>
+<kw name="Adicionar produto no carrinho usando botao atalho &quot;Carrinho&quot;" library="kabum_resources">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scroll(0,700)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230930 15:57:13.316" level="INFO">Executing JavaScript:
+window.scroll(0,700)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230930 15:57:13.315" endtime="20230930 15:57:13.324"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>locator=${MOUSE}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230930 15:57:13.325" level="INFO">Simulating Mouse Over on element '//img[contains(@title,'Controlador De Fan Bcf-03 Bluecase - Box Com Controle Remoto')]'.</msg>
+<status status="PASS" starttime="20230930 15:57:13.324" endtime="20230930 15:57:13.693"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>locator=${BOTAO_CARRINHO}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230930 15:57:13.693" level="INFO">Clicking button '(//button[@class='sc-5b1e63c8-0 iRosYJ'])[1]'.</msg>
+<status status="PASS" starttime="20230930 15:57:13.693" endtime="20230930 15:57:13.781"/>
+</kw>
+<status status="PASS" starttime="20230930 15:57:13.314" endtime="20230930 15:57:13.782"/>
+</kw>
+<kw name="Validar se o produto está no carrinho usando botao atalho &quot;Carrinho&quot;" library="kabum_resources">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${TEXTO_CARRINHO}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230930 15:57:13.782" endtime="20230930 15:57:14.285"/>
+</kw>
+<status status="PASS" starttime="20230930 15:57:13.782" endtime="20230930 15:57:14.285"/>
+</kw>
+<doc>Esse teste navega até a subcategoria Acessórios para Cooler
+e adiciona um produto no carrinho através do botão de atalho Carrinho</doc>
+<tag>adiciona_produto_carrinho</tag>
+<status status="PASS" starttime="20230930 15:57:04.943" endtime="20230930 15:57:14.285"/>
+</test>
+<test id="s1-t4" name="Caso de Teste 04 - Adicionar um produto de categoria ao carrinho botão &quot;Comprar&quot;" line="36">
+<kw name="Abrir o navegador" library="kabum_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230930 15:57:14.287" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230930 15:57:14.286" endtime="20230930 15:57:15.373"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230930 15:57:15.373" endtime="20230930 15:57:15.502"/>
+</kw>
+<status status="PASS" starttime="20230930 15:57:14.286" endtime="20230930 15:57:15.502"/>
+</kw>
+<kw name="Acessar a home page do site Kabum.com.br" library="kabum_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230930 15:57:15.503" level="INFO">Opening url 'https://kabum.com.br'</msg>
+<status status="PASS" starttime="20230930 15:57:15.503" endtime="20230930 15:57:18.871"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=logoKabum</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 15:57:18.871" endtime="20230930 15:57:18.956"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>title=${TITULO}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230930 15:57:18.970" level="INFO">Page title is 'KaBuM! | Maior E-commerce de Tecnologia e Games da América Latina'.</msg>
+<status status="PASS" starttime="20230930 15:57:18.956" endtime="20230930 15:57:18.970"/>
+</kw>
+<status status="PASS" starttime="20230930 15:57:15.502" endtime="20230930 15:57:18.970"/>
+</kw>
+<kw name="Entrar no menu &quot;Departamentos&quot; &gt; Hardware &gt; Coolers &gt; Acessórios para Cooler" library="kabum_resources">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>locator=${MENU_DEPARTAMENTOS}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230930 15:57:18.971" level="INFO">Simulating Mouse Over on element '//span[contains(.,'DEPARTAMENTOS')]'.</msg>
+<status status="PASS" starttime="20230930 15:57:18.971" endtime="20230930 15:57:19.344"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${SUBCATEGORIA_HARDWARE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 15:57:19.345" endtime="20230930 15:57:19.374"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>locator=${SUBCATEGORIA_HARDWARE}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230930 15:57:19.374" level="INFO">Simulating Mouse Over on element '//a[@href='https://www.kabum.com.br/hardware']'.</msg>
+<status status="PASS" starttime="20230930 15:57:19.374" endtime="20230930 15:57:19.652"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${SUBCATEGORIA_COOLERS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 15:57:19.652" endtime="20230930 15:57:19.907"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>locator=${SUBCATEGORIA_COOLERS}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230930 15:57:19.907" level="INFO">Simulating Mouse Over on element '//a[@href='https://www.kabum.com.br/hardware/coolers']'.</msg>
+<status status="PASS" starttime="20230930 15:57:19.907" endtime="20230930 15:57:20.186"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${SUBCATEGORIA_ACESSO_COOLERS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 15:57:20.186" endtime="20230930 15:57:20.624"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${SUBCATEGORIA_ACESSO_COOLERS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230930 15:57:20.624" level="INFO">Clicking element '//a[@href='https://www.kabum.com.br/hardware/coolers/acessorios-para-cooler']'.</msg>
+<status status="PASS" starttime="20230930 15:57:20.624" endtime="20230930 15:57:22.419"/>
+</kw>
+<status status="PASS" starttime="20230930 15:57:18.970" endtime="20230930 15:57:22.419"/>
+</kw>
+<kw name="Adicionar produto no carrinho usando botao &quot;Comprar&quot;" library="kabum_resources">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scroll(0,700)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230930 15:57:22.422" level="INFO">Executing JavaScript:
+window.scroll(0,700)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230930 15:57:22.421" endtime="20230930 15:57:22.437"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${BOTAO_COMPRAR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230930 15:57:22.438" endtime="20230930 15:57:22.484"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>locator=${BOTAO_COMPRAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230930 15:57:22.484" level="INFO">Clicking button '(//button[@class='sc-534df227-0 csoHAH'][contains(.,'COMPRAR')])[2]'.</msg>
+<status status="PASS" starttime="20230930 15:57:22.484" endtime="20230930 15:57:22.656"/>
+</kw>
+<status status="PASS" starttime="20230930 15:57:22.421" endtime="20230930 15:57:22.656"/>
+</kw>
+<kw name="Validar se o produto está no carrinho usando botao &quot;Comprar&quot;" library="kabum_resources">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${TEXTO_CARRINHO2}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230930 15:57:22.656" endtime="20230930 15:57:23.915"/>
+</kw>
+<status status="PASS" starttime="20230930 15:57:22.656" endtime="20230930 15:57:23.915"/>
+</kw>
+<doc>Esse teste navega até a subcategoria Acessórios para Cooler
+e adiciona um produto no carrinho através do botão Comprar</doc>
+<tag>adiciona_produto_comprar</tag>
+<status status="PASS" starttime="20230930 15:57:14.286" endtime="20230930 15:57:23.916"/>
+</test>
+<doc>Essa suíte testa o site da Kabum.com.br</doc>
+<status status="PASS" starttime="20230930 15:56:46.745" endtime="20230930 15:57:23.917"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">adiciona_produto_carrinho</stat>
+<stat pass="1" fail="0" skip="0">adiciona_produto_comprar</stat>
+<stat pass="1" fail="0" skip="0">busca_produtos categorias</stat>
+<stat pass="1" fail="0" skip="0">logins</stat>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Kabum Teste">Kabum Teste</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
