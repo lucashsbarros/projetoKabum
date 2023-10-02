@@ -69,4 +69,4 @@ Nesse repositório consta os seguintes cenários de testes:
  - Não preencher nenhum campo
  
  Referente aos **Casos de Teste 03** e **04**, ainda existe mais uma forma de comprar pelo site que seria clicando no produto, o site leva até a página do produto e por lá podemos clicar no botão COMPRAR. 
- Esse trecho de códifo que está comentado no arquivo kabum_teste.robot, o mesmo foi escrito de forma PROCEDURAL apenas.
+ Esse trecho de código que está comentado no arquivo kabum_teste.robot, o mesmo foi escrito de forma PROCEDURAL apenas.
