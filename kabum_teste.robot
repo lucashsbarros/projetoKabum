@@ -41,7 +41,7 @@ Caso de Teste 04 - Adicionar um produto de categoria ao carrinho botão "Comprar
     Adicionar produto no carrinho usando botao "Comprar"
     Validar se o produto está no carrinho usando botao "Comprar"
 
-#Caso de Teste 05(Extra) - Adicionar um produto de categoria ao carrinho clicando no produto
+#Caso de Teste 05 (Extra) - Adicionar um produto de categoria ao carrinho clicando no produto
 #    [Documentation]     Esse teste navega até a subcategoria Acessórios para Cooler
 #        ...             e adiciona um produto no carrinho através do botão Comprar
 #    [Tags]              adiciona_produto
