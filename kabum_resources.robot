@@ -17,6 +17,10 @@ ${TEXTO_CARRINHO}                   Produto adicionado com sucesso no carrinho
 ${BOTAO_COMPRAR}                    (//button[@class='sc-534df227-0 csoHAH'][contains(.,'COMPRAR')])[2]
 ${TEXTO_CARRINHO2}                  PRODUTO ADICIONADO NO CARRINHO
 ${TITULO}                           KaBuM! | Maior E-commerce de Tecnologia e Games da América Latina
+${PRODUTO}                          //img[contains(@title,'Controlador De Fan Bcf-03 Bluecase - Box Com Controle Remoto')]
+${PAGINA_PRODUTO}                   //span[@class='sc-16f86c3f-4 hezezy'][contains(.,'Código: 183963')]
+${BOTAO_COMPRAR_PAG_PRODUTO}        //button[@class='sc-8b813326-0 dqSNwh'][contains(.,'COMPRAR')]
+${MSG_PROD_ADICIONADO}              //strong[contains(.,'PRODUTO ADICIONADO NO CARRINHO')]
 
 *** Keywords ***
 Abrir o navegador
@@ -77,6 +81,20 @@ Adicionar produto no carrinho usando botao "Comprar"
 Validar se o produto está no carrinho usando botao "Comprar"
     Wait Until Page Contains    text=${TEXTO_CARRINHO2}
 
+Clicar no produto
+    Execute Javascript  window.scroll(0,700)
+    Wait Until Element Is Visible       locator=${PRODUTO}
+    Click Element    locator=${PRODUTO}
+
+Validar página do produto
+    Wait Until Element Is Visible   locator=${PAGINA_PRODUTO}
+
+Clicar no botão comprar
+    Wait Until Element Is Visible   locator=${BOTAO_COMPRAR_PAG_PRODUTO}
+    Click Button                    locator=${BOTAO_COMPRAR_PAG_PRODUTO}
+    
+Validar produto no carrinho
+    Wait Until Element Is Visible   locator=${MSG_PROD_ADICIONADO}
 
 # ------------------------ GHERKIN STEPS ------------------------------
 
