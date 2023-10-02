@@ -10,7 +10,7 @@ Esse repositório contém testes automatizados através da ferramenta Robot Fram
     a) SeleniumLibrary *(versão 6.1.1)*
 
     b) RequestLibrary *(versão 1.0a4)*
- 5. Instalando editor de Código
+4. Instalando editor de Código
 	a) DRACULA OFFICIAL (opcional)
 Pesquisar na parte de Plugins da sua IDE (no nosso caso foi o IntelliJ) 
 	
