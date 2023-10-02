@@ -6,19 +6,21 @@ Esse repositório contém testes automatizados através da ferramenta Robot Fram
  1. Python *(versão 3.11.5)* 
  2. Robot Framework *(versão 6.1.1)*
  3. Instalando as Libraries
-a) SeleniumLibrary *(versão 6.1.1)*
-b) RequestLibrary *(versão 1.0a4)*
- 4. Instalando editor de Código
+
+    a) SeleniumLibrary *(versão 6.1.1)*
+
+    b) RequestLibrary *(versão 1.0a4)*
+ 5. Instalando editor de Código
 	a) DRACULA OFFICIAL (opcional)
 Pesquisar na parte de Plugins da sua IDE (no nosso caso foi o IntelliJ) 
 	
 	b) Robot Framework Language Server 
 Pesquisar na parte de Plugins da sua IDE (no nosso caso foi o IntelliJ) 
 
- 5. Instalação de WebDrivers
+ 6. Instalação de WebDrivers
 	a) CHROME *(versão 116)*
 	b) FIREFOX *(versão 117)*
- 6. TRUEPATH (qaworld.ga) 	  
+ 7. TRUEPATH (qaworld.ga) 	  
 
 ## Cenários de Testes
 Nesse repositório consta os seguintes cenários de testes:
