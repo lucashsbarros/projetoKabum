@@ -26,15 +26,6 @@ Pesquisar na parte de Plugins da sua IDE (no nosso caso foi o IntelliJ)
 	b) FIREFOX *(versão 117)*
  7. TRUEPATH (qaworld.ga) 	  
 
-## Cenários de Testes
-Nesse repositório consta os seguintes cenários de testes:
-
- - **Caso de Teste 01** - Validar um usuário inválido senha ou e-mail incorretos
- - **Caso de Teste 02** - Fazer a busca de produto
- - **Caso de Teste 03** - Adicionar um produto de categoria ao carrinho atalho "Carrinho"
- - **Caso de Teste 04** - Adicionar um produto de categoria ao carrinho botão "Comprar" 
- - **Caso de Teste 05** -  (Extra) - Adicionar um produto de categoria ao carrinho clicando no produto
-
 ## Requerimentos e Instalações
 Baixar do site:
     https://www.python.org/downloads/
@@ -83,6 +74,36 @@ Pesquisar na parte de Plugins da sua IDE (no nosso caso foi o IntelliJ)
 
 	  link: https://chrome.google.com/webstore/detail/truepath/mgjhkhhbkkldiihlajcnlfchfcmhipmn?gclid=CjwKCAjwrranBhAEEiwAzbhNtXfzMkKUuClIwBabo0ibxFEoljG1MDnTvC2dTwbNl9TrYVFL8YagqhoCtC0QAvD_BwE
 
+## Executando os testes
+
+ 1. Baixar o projeto do GitHub e salvar
+ 2.  Abrir sua IDE (para esse projeto usamos Visual Studio Code e
+    IntelliJ)]
+ 3. Abrir projeto pela opção FILE > Open../Open Folder
+ 4. Abrir o projeto clicando na pasta "projetoKabum-main"
+ 5.  a) Executar os seguintes comandos
+
+    robot .\kabum_teste.robot
+ou
+
+    robot .\kabum_teste_gherkin_bdd.robot
+
+O recomendável é utilizar os comandos onde já salva os resultados em suas respectivas pastas.
+
+    robot -d resultados .\kabum_teste.robot
+ou
+
+    robot -d resultados_gherkin .\kabum_teste_gherkin_bdd.robot
+5. b) Outra forma para executar os testes é utilizando a função **RUN** Há uma seta que fica ao lado esquerdo no nome do caso de teste que se encontra nas pastas "kabum_teste.robot" e "kabum_teste_gherkin_bdd.robot"
+
+## Cenários de Testes
+Nesse repositório consta os seguintes cenários de testes:
+
+ - **Caso de Teste 01** - Validar um usuário inválido senha ou e-mail incorretos
+ - **Caso de Teste 02** - Fazer a busca de produto
+ - **Caso de Teste 03** - Adicionar um produto de categoria ao carrinho atalho "Carrinho"
+ - **Caso de Teste 04** - Adicionar um produto de categoria ao carrinho botão "Comprar" 
+ - **Caso de Teste 05** -  (Extra) - Adicionar um produto de categoria ao carrinho clicando no produto
  
  ## Informações Extras
 Referente ao **Caso de Teste 01**, existe outras formas de fazer uma validação de um usuário inválido, sendo elas: 
