@@ -3,14 +3,15 @@
 Esse repositório contém testes automatizados através da ferramenta Robot Framework, com Selenium Labrary, sendo utilizado Keywords na sua base (*sendo Keywords palavras chaves para efetuar os testes automatizados*), foi criado os scripts de teste de forma **Procedural** e **GHERKIN com BDD**  e para a realização dos testes utilizamos o site da Kabum. 
 ## Tecnologias Utilizadas
 
- 1. Python *(versão 3.11.5)* 
- 2. Robot Framework *(versão 6.1.1)*
- 3. Instalando as Libraries
+ 1. Python *(versão 3.11.5)*
+ 2. Visual Studio ou IntelliJ
+ 3. Robot Framework *(versão 6.1.1)*
+ 4. Instalando as Libraries
 
     a) SeleniumLibrary *(versão 6.1.1)*
 
     b) RequestLibrary *(versão 1.0a4)*
-4. Instalando editor de Código
+5. Instalando editor de Código
 
 	a) DRACULA OFFICIAL (opcional)
 Pesquisar na parte de Plugins da sua IDE (no nosso caso foi o IntelliJ) 
@@ -19,7 +20,9 @@ Pesquisar na parte de Plugins da sua IDE (no nosso caso foi o IntelliJ)
 Pesquisar na parte de Plugins da sua IDE (no nosso caso foi o IntelliJ) 
 
  6. Instalação de WebDrivers
+ 
 	a) CHROME *(versão 116)*
+ 
 	b) FIREFOX *(versão 117)*
  7. TRUEPATH (qaworld.ga) 	  
 
