@@ -30,19 +30,26 @@ Pesquisar na parte de Plugins da sua IDE (no nosso caso foi o IntelliJ)
 Baixar do site:
     https://www.python.org/downloads/
 Robot Framework:
-	a) comando para baixar via CMD `pip install robotframework`
-	b) caso já tenha instalado uma versão do robot framework utilizar o comando `pip install -U robotframework` para atualizar e `robot --version` para conferir a versão instalada.
+
+
+a) comando para baixar via CMD `pip install robotframework` 
+
+
+b) caso já tenha instalado uma versão do robot framework utilizar o comando `pip install -U robotframework` para atualizar e `robot --version` para conferir a versão instalada.
+ 
+ 
 
 Instalando as Libraries
+
 a) SeleniumLibrary *(versão 6.1.1)*
 site: https://github.com/robotframework/SeleniumLibrary/#installation
 comando instalar/atualizar: `pip install -U robotframework-seleniumlibrary`	
 
-	b) RequestLibrary *(versão 1.0a4)*
+b) RequestLibrary *(versão 1.0a4)*
 site: https://github.com/MarketSquare/robotframework-requests#readme
 comando instalar/atualizar: `pip install -U robotframework-requests`
 
-	**Observação:** caso queira conferir quais versões estão instaladas digite o comando abaixo: `pip list`
+**Observação:** caso queira conferir quais versões estão instaladas digite o comando abaixo: `pip list`
 
  4. Instalando editor de Código
 
@@ -53,6 +60,7 @@ Pesquisar na parte de Plugins da sua IDE (no nosso caso foi o IntelliJ)
 Pesquisar na parte de Plugins da sua IDE (no nosso caso foi o IntelliJ) 
 
  5. Instalação de WebDrivers
+ 
 	a) CHROME *(versão 116)*
 	Link: 
 	https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/116.0.5845.96/win64/chromedriver-win64.zip	
