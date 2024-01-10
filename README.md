@@ -1,6 +1,6 @@
 # Teste Kabum
 
-Esse repositório contém testes automatizados através da ferramenta Robot Framework, com Selenium Labrary, sendo utilizado Keywords na sua base (*sendo Keywords palavras chaves para efetuar os testes automatizados*), foi criado os scripts de teste de forma **Procedural** e **GHERKIN com BDD**  e para a realização dos testes utilizamos o site da Kabum. 
+Esse repositório contém testes automatizados através da ferramenta Robot Framework, com SeleniumLibrary, sendo utilizado Keywords na sua base (*sendo Keywords palavras chaves para efetuar os testes automatizados*), foi criado os scripts de teste de forma **Procedural** e **GHERKIN com BDD**  e para a realização dos testes utilizamos o site da Kabum. 
 ## Tecnologias Utilizadas
 
  1. Python *(versão 3.11.5)*
